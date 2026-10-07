@@ -1,0 +1,53 @@
+# clang-format config for learn-cpp (C++23)
+# Generated for clang-format 19.x. Docs: https://clang.llvm.org/docs/ClangFormatStyleOptions.html
+
+BasedOnStyle: LLVM
+Language: Cpp
+
+# C#-style braces: opening brace on its own line, aligned with the closing brace
+BreakBeforeBraces: Allman
+
+# Indentation
+IndentWidth: 4
+TabWidth: 4
+UseTab: Never
+ColumnLimit: 80
+NamespaceIndentation: All
+
+# Pointers/references hug the type (int* p), not the variable
+PointerAlignment: Left
+
+# One parameter per line when wrapping (no bin-packing)
+BinPackArguments: false
+BinPackParameters: false
+
+# Keep short constructs multi-line (Allman-friendly)
+AllowShortFunctionsOnASingleLine: None
+AllowShortIfStatementsOnASingleLine: false
+AllowShortLoopsOnASingleLine: false
+AllowShortBlocksOnASingleLine: false
+
+# Space before ( only after control statements (if, for, while), not after function names
+SpaceBeforeParens: ControlStatements
+
+# Includes: sort + group (matches the 2.11 order: own header -> project -> std)
+SortIncludes: true
+IncludeBlocks: Regroup
+IncludeCategories:
+  - Regex: '^<learn-cpp/'
+    Priority: 1
+  - Regex: '^"learn-cpp/'
+    Priority: 1
+  - Regex: '^<'
+    Priority: 2
+  - Regex: '.*'
+    Priority: 3
+
+# Comments and whitespace
+AlignTrailingComments: true
+ReflowComments: true
+MaxEmptyLinesToKeep: 2
+
+# Access modifiers (public:/private:) outdented one level in classes
+AccessModifierOffset: -4
+SpaceBeforeCpp11BracedList: true

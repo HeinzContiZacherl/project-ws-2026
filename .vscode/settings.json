@@ -1,0 +1,9 @@
+{
+    // Tells clangd where CMake's compile_commands.json lives. Replace with YOUR build dir.
+    "clangd.arguments": [
+        "--compile-commands-dir=/path/to/your/project/build/debug"
+    ],
+    // Disables the C/C++ extension's IntelliSense so clangd is the only analysis engine (no duplicate diagnostics).
+    "C_Cpp.intelliSenseEngine": "disabled",
+    "editor.formatOnSave": true
+}
