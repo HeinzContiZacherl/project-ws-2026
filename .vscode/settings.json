@@ -2,9 +2,13 @@
     "cmake.useCMakePresets": "always",
     "cmake.configurePreset": "debug",
     "cmake.buildBeforeRun": true,
-    "C_Cpp.default.compileCommands": "${workspaceFolder}/build/debug/compile_commands.json",
-    "C_Cpp.default.cppStandard": "c++23",
-    "C_Cpp.intelliSenseEngine": "default",
+    "clangd.arguments": [
+        "--compile-commands-dir=D:/projects/project-ws-2026/build/debug",
+        "--background-index",
+        "--completion-style=detailed",
+        "--header-insertion=iwyu"
+    ],
+    "C_Cpp.intelliSenseEngine": "disabled",
     "C_Cpp.clang_format_style": "file",
     "editor.formatOnSave": true,
     "[cpp]": {
